@@ -1,0 +1,13 @@
+extends base
+
+block content  
+  .container
+    div
+      form(data-aos="fade-left" data-aos-delay="300")      
+        label(for='') Category
+        input#type(type='text' name='type')
+        label(for='setup') Set Up
+        input#setup(type='text' name='setup')
+        label(for='punchline') Punchline
+        input#punchline(type='text' name='punchline' )        
+        input(type='submit' value='Submit')

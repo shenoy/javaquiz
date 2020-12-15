@@ -1,0 +1,10 @@
+extends base
+
+block content
+  .container   
+    #box(data-aos='fade-in' data-aos-delay='600')
+      p= joke.setup
+      .clicker(tabindex='1') Click
+      .hiddendiv
+        p= joke.punchline        
+    a.next(href='/') Next Joke
