@@ -1,6 +1,7 @@
 body {
   min-height: 100vh;
-  background: url(/img/body2.jpg) no-repeat center center fixed;
+  background: url(/img/oracle2.jpg) no-repeat center center fixed;
+  background-size: cover;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -9,11 +10,11 @@ body {
 h1 {
   text-align: center;
   font-family: "Lato", sans-serif;
-  color: brown;
+  color: rgb(247, 243, 243);
 }
 
 img {
-  height: 150px;
+  height: 100px;
   border-radius: 5px;
 }
 
@@ -46,8 +47,8 @@ a.next {
   text-align: center;
   border: 1px solid rgb(154, 154, 161);
   border-radius: 30px;
-  background-color: cornflowerblue;
-  box-shadow: 10px 10px 5px black;
+  background-color: black;
+  box-shadow: 1px 1px 1px black;
   text-decoration: none;
   padding: 20px 100px 20px 100px;
 }
@@ -59,21 +60,20 @@ a.next:hover {
   border: 3px solid green;
   border: 1px solid rgb(154, 154, 161);
   border-radius: 30px;
-  font-weight: 300;
-  background-color: rgb(12, 31, 139);
-  box-shadow: 10px 10px 5px black;
+  background-color: red;
+  box-shadow: 1px 1px 1px black;
   text-decoration: none;
   padding: 20px 100px 20px 100px;
 }
 
 header {
-  box-shadow: 10px 10px 5px black;
+  box-shadow: 1px 1px 1px black;
   margin-bottom: 30px;
-  height: 150px;
+  height: 100px;
   left: 0;
   bottom: 0;
   color: white;
-  background: url(/img/header2.jpeg);
+  background: url(/img/header7.jpeg);
   width: 100%;
   align-items: center;
   text-align: center;
@@ -99,14 +99,15 @@ nav.nav {
 
 #box {
   box-sizing: content-box;
-  box-shadow: 10px 10px 5px black;
+  box-shadow: 1px 1px 0.5px black;
   font-family: "Lato", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   width: 40%;
   height: 200px;
   padding: 30px;
   border: 1px solid rgb(154, 154, 161);
   border-radius: 15px;
+  margin-top: 5%;
   margin-bottom: 15px;
   color: black;
   background-color: white;
@@ -140,12 +141,13 @@ form {
   width: 50%;
   margin-left: 25%;
   font-family: "Lato", sans-serif;
-  color: brown;
+  color: rgb(236, 223, 223);
   font-size: 2rem;
 }
 input[type="text"],
 select {
   width: 100%;
+  white-space: normal;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -156,20 +158,19 @@ select {
 
 input[type="submit"] {
   width: 100%;
-  background-color: #f16eb6;
-  color: white;
+  background-color: #e41c37;
+  color: rgb(241, 233, 233);
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   font-size: 1.5rem;
   cursor: pointer;
-  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 1px 1px black;
 }
 
 input[type="submit"]:hover {
-  background-color: #f358b3;
-  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  background-color: #f3587a;
 }
 
 .alert {
@@ -180,9 +181,8 @@ input[type="submit"]:hover {
   transform: translateX(-50%);
   z-index: 9999;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: "Lato", sans-serif;
-  font-weight: 400;
   text-align: center;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -202,7 +202,7 @@ input[type="submit"]:hover {
   height: 30px;
   background-color: rgb(237, 224, 241);
   cursor: default;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
   align-items: center;
   margin: auto;
@@ -257,7 +257,7 @@ p {
 
 @media screen and (min-width: 900px) {
   #box {
-    font-size: 1.5rem;
+    font-size: 1rem;
     height: 200px;
   }
   .clicker {
@@ -289,9 +289,9 @@ p {
 
 #box.about {
   box-sizing: content-box;
-  box-shadow: 10px 10px 5px black;
+  box-shadow: 1px 1px 0.5px black;
   font-family: "Lato", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   min-width: 300px;
   height: 800px;
   padding: 30px;

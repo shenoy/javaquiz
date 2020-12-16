@@ -1,0 +1,17 @@
+[
+  {
+    "type": "advanced java class design",
+    "question": "Can a static interface method be marked final? ",
+    "answer": "No"
+  },
+  {
+    "type": "advanced java class design",
+    "question": "Can local inner classes have static methods or variables ? ",
+    "answer": "No"
+  },
+  {
+    "type": "io",
+    "question": "Buffered reader syntax is while(reader.readline()!=null). What will happen?",
+    "answer": "It will print null if there are even number of lines"
+  }
+]

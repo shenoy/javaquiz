@@ -1,94 +1,172 @@
-const Joke = require("../models/jokesModel");
+const Quiz = require("../models/quizModel");
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 
-exports.getAllJokes = catchAsync(async (req, res, next) => {
+exports.getAllQuiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
-  const jokes = await Joke.find();
+  const quiz = await Quiz.find();
+  console.log(quiz);
   // 2) Build template
-  res.status(200).render("overview", {
-    title: "All jokes",
-    jokes,
+  res.status(200).render("topic", {
+    title: "All",
+    quiz,
   });
 });
 
-exports.getRandomJoke = catchAsync(async (req, res, next) => {
+exports.getRandomQuiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
-  const jokes = await Joke.find();
-  const rn = Math.floor(Math.random() * jokes.length);
-  const joke = jokes[rn];
+  const result = await Quiz.find();
+  const rn = Math.floor(Math.random() * result.length);
+  quiz = result[rn];
   // 2) Build template
   res.status(200).render("random", {
     title: "Random Joke",
-    joke,
+    quiz,
   });
 });
 
-exports.getProgrammingJoke = catchAsync(async (req, res, next) => {
+exports.getIOQuiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
-  const allJokes = await Joke.find();
-  const jokes = allJokes.filter((x) => x.type === "programming");
+  const allQuiz = await Quiz.find();
+  const quiz = allQuiz.filter((x) => x.type === "io");
   // 2) Build template
-  res.status(200).render("programming", {
-    title: "Programming Jokes",
-    jokes,
+  res.status(200).render("topic", {
+    title: "I/O",
+    quiz,
   });
 });
 
-exports.getGeneralJoke = catchAsync(async (req, res, next) => {
+exports.getNio2Quiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
-  const allJokes = await Joke.find();
-  const jokes = allJokes.filter((x) => x.type === "general");
+  const allQuiz = await Quiz.find();
+  const quiz = allQuiz.filter((x) => x.type === "nio2");
   // 2) Build template
-  res.status(200).render("general", {
-    title: "General Jokes",
-    jokes,
+  res.status(200).render("topic", {
+    title: "NIO.2",
+    quiz,
   });
 });
 
-exports.getKnockKnockJoke = catchAsync(async (req, res, next) => {
+exports.getGenericsQuiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
-  const allJokes = await Joke.find();
-  const jokes = allJokes.filter((x) => x.type.includes("nock"));
+  const allQuiz = await Quiz.find();
+  const quiz = allQuiz.filter((x) => x.type.includes("generics"));
   // 2) Build template
-  res.status(200).render("knockknock", {
-    title: "Knock Jokes",
-    jokes,
+  res.status(200).render("topic", {
+    title: "generics",
+    quiz,
   });
 });
-exports.getJoke = catchAsync(async (req, res, next) => {
-  const joke = await Joke.findById(req.params.id);
 
-  if (!joke) {
-    return next(new AppError("There is no joke with that id.", 404));
+exports.getJdbcQuiz = catchAsync(async (req, res, next) => {
+  // 1) Get jokes from collection
+  const allQuiz = await Quiz.find();
+  const quiz = allQuiz.filter((x) => x.type.includes("jdbc"));
+  // 2) Build template
+  res.status(200).render("topic", {
+    title: "jdbc",
+    quiz,
+  });
+});
+
+exports.getDateQuiz = catchAsync(async (req, res, next) => {
+  // 1) Get jokes from collection
+  const allQuiz = await Quiz.find();
+  const quiz = allQuiz.filter((x) => x.type.includes("date"));
+  // 2) Build template
+  res.status(200).render("topic", {
+    title: "date/time",
+    quiz,
+  });
+});
+
+exports.getExceptionsQuiz = catchAsync(async (req, res, next) => {
+  // 1) Get jokes from collection
+  const allQuiz = await Quiz.find();
+  const quiz = allQuiz.filter((x) => x.type.includes("ceptions"));
+  // 2) Build template
+  res.status(200).render("topic", {
+    title: "Exceptions",
+    quiz,
+  });
+});
+
+exports.getFunctionalProgrammingQuiz = catchAsync(async (req, res, next) => {
+  // 1) Get jokes from collection
+  const allQuiz = await Quiz.find();
+  const quiz = allQuiz.filter((x) => x.type.includes("ctional"));
+  // 2) Build template
+  res.status(200).render("topic", {
+    title: "Functional Programming",
+    quiz,
+  });
+});
+
+exports.getAdvancedClassDesignQuiz = catchAsync(async (req, res, next) => {
+  // 1) Get jokes from collection
+  const allQuiz = await Quiz.find();
+  const quiz = allQuiz.filter((x) => x.type.includes("dvanced"));
+  // 2) Build template
+  res.status(200).render("topic", {
+    title: "Adv Class Design",
+    quiz,
+  });
+});
+
+exports.getJavaClassDesignQuiz = catchAsync(async (req, res, next) => {
+  // 1) Get jokes from collection
+  const allQuiz = await Quiz.find();
+  const quiz = allQuiz.filter((x) => x.type.includes("design"));
+  // 2) Build template
+  res.status(200).render("topic", {
+    title: "Java Class Design",
+    quiz,
+  });
+});
+
+exports.getConcurrencyQuiz = catchAsync(async (req, res, next) => {
+  // 1) Get jokes from collection
+  const allQuiz = await Quiz.find();
+  const quiz = allQuiz.filter((x) => x.type.includes("currency"));
+  // 2) Build template
+  res.status(200).render("topic", {
+    title: "Concurrency",
+    quiz,
+  });
+});
+exports.getQuiz = catchAsync(async (req, res, next) => {
+  const quiz = await Quiz.findById(req.params.id);
+
+  if (!quiz) {
+    return next(new AppError("There is no quiz with that id.", 404));
   }
 
   // 2) Build template
   // 3) Render template using data from 1)
   res.status(200).render("joke", {
-    title: `${joke.type} Joke`,
-    joke,
+    title: `${quiz.type} Joke`,
+    quiz,
   });
 });
 
 exports.getSubmitForm = (req, res) => {
   res.status(200).render("submit", {
-    title: "Submit your joke",
+    title: "Submit your quiz",
   });
 };
 
 exports.getAboutPage = (req, res) => {
   res.status(200).render("about", {
-    title: "About comedy shack",
+    title: "About javaquiz",
   });
 };
 
-exports.updateJokeData = catchAsync(async (req, res, next) => {
-  const updatedUser = await User.findByIdAndUpdate(
+exports.updateQuizData = catchAsync(async (req, res, next) => {
+  const updatedQuiz = await Quiz.findByIdAndUpdate(
     req.joke.id,
     {
-      setup: req.body.setup,
-      punchline: req.body.punchline,
+      setup: req.body.question,
+      punchline: req.body.answer,
     },
     {
       new: true,
@@ -98,6 +176,6 @@ exports.updateJokeData = catchAsync(async (req, res, next) => {
 
   res.status(200).render("update", {
     title: "update",
-    user: updatedJoke,
+    user: updatedQuiz,
   });
 });

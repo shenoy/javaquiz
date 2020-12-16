@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controllers/errorController");
-const jokesRouter = require("./routes/jokesRoutes");
+const quizRouter = require("./routes/quizRoutes");
 const viewRouter = require("./routes/viewRoutes");
 dotenv.config({ path: "./config.env" });
 const app = express();
@@ -50,7 +50,7 @@ app.use((req, res, next) => {
 
 // 3) ROUTES
 app.use("/", viewRouter);
-app.use("/api/v1/jokes", jokesRouter);
+app.use("/api/v1/javaquiz", quizRouter);
 app.all("*", (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });

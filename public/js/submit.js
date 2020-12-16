@@ -1,14 +1,14 @@
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
   const type = document.getElementById("type").value;
-  const setup = document.getElementById("setup").value;
-  const punchline = document.getElementById("punchline").value;
-  submit(type, setup, punchline);
+  const answer = document.getElementById("answer").value;
+  const question = document.getElementById("question").value;
+  submit(type, question, answer);
 });
 
-const submit = async (type, setup, punchline) => {
-  console.log(type, setup, punchline);
-  const url = "http://127.0.0.1:3000/api/v1/jokes/";
+const submit = async (type, question, answer) => {
+  console.log(type, question, answer);
+  const url = "http://127.0.0.1:3000/api/v1/javaquiz/";
 
   try {
     const res = await axios({
@@ -16,13 +16,13 @@ const submit = async (type, setup, punchline) => {
       url: url,
       data: {
         type,
-        setup,
-        punchline,
+        question,
+        answer,
       },
     });
     console.log(res);
     if (res.data.status === "success") {
-      showAlert("success", "Joke submitted successfully!");
+      showAlert("success", "Quiz submitted successfully!");
       window.setTimeout(() => {
         location.assign("/");
       }, 1500);
