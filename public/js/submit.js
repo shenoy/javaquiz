@@ -8,7 +8,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
 
 const submit = async (type, question, answer) => {
   console.log(type, question, answer);
-  const url = "http://127.0.0.1:3000/api/v1/javaquiz/";
+  const url = "https://javaquiz.herokuapp.com/api/v1/javaquiz/";
 
   try {
     const res = await axios({
