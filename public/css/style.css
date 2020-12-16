@@ -191,7 +191,11 @@ input[type="submit"]:hover {
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
 }
 .alert--success {
-  background-image: linear-gradient(to right, green, pink);
+  background-image: linear-gradient(
+    to right,
+    rgb(69, 164, 228),
+    rgb(192, 193, 255)
+  );
 }
 .alert--error {
   background-image: linear-gradient(to right, red, pink);
