@@ -20,7 +20,7 @@ exports.getRandomQuiz = catchAsync(async (req, res, next) => {
   quiz = result[rn];
   // 2) Build template
   res.status(200).render("random", {
-    title: "Random Joke",
+    title: "Random Quiz",
     quiz,
   });
 });
