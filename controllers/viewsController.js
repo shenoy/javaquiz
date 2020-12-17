@@ -155,6 +155,12 @@ exports.getSubmitForm = (req, res) => {
   });
 };
 
+exports.getRadio = (req, res) => {
+  res.status(200).render("radiobutton", {
+    title: "quiz",
+  });
+};
+
 exports.getAboutPage = (req, res) => {
   res.status(200).render("about", {
     title: "About javaquiz",

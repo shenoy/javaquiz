@@ -1,17 +1,118 @@
 [
   {
-    "type": "advanced java class design",
-    "question": "Can a static interface method be marked final? ",
-    "answer": "No"
-  },
-  {
-    "type": "advanced java class design",
-    "question": "Can local inner classes have static methods or variables ? ",
-    "answer": "No"
-  },
-  {
-    "type": "io",
-    "question": "Buffered reader syntax is while(reader.readline()!=null). What will happen?",
-    "answer": "It will print null if there are even number of lines"
+    "status": "success",
+    "results": 18,
+    "data": {
+      "quiz": [
+        {
+          "_id": "5fd95343f7510d4f0788db10",
+          "type": "advanced java class design",
+          "question": "Can a static interface method be marked final?",
+          "answer": "No"
+        },
+        {
+          "_id": "5fd95343f7510d4f0788db12",
+          "type": "io",
+          "question": "Buffered reader syntax is while(reader.readline()!=null). What will happen?",
+          "answer": "It will print null if there are even number of lines"
+        },
+        {
+          "_id": "5fd97530cf88366c50f18686",
+          "type": "jdbc",
+          "question": "An int variable is assigned to an executeQuery command. What will be the output?",
+          "answer": "It will not compile."
+        },
+        {
+          "_id": "5fd98206e9db474fb1b6000a",
+          "type": "functional programming",
+          "question": "public functional interface chew {} // what will be the output",
+          "answer": "Does not compile. There is no \"functional\" modifier in Java."
+        },
+        {
+          "_id": "5fd98423e9db474fb1b6000b",
+          "type": "nio2",
+          "question": "BasicFileAttributeView.setTimes(null, null, null); // what will be the output ?",
+          "answer": "It will leave the BasicFileAttributes date and time values unchanged."
+        },
+        {
+          "_id": "5fd9849be9db474fb1b6000c",
+          "type": "concurrency",
+          "question": "service.submit(()-> selectWinner(i)); // What is wrong with this code ?",
+          "answer": "submit uses a callable or runnable in the form of a lambda and will not take any parameters"
+        },
+        {
+          "_id": "5fd98687496a5c7be4b64e9e",
+          "type": "generics",
+          "question": "given a list of int values without using  generics and an enhanced for loop for(Number num :  list) System.out.print(num) what will be the output ?",
+          "answer": "It will not compile. To make it compile replace Number with Object.",
+        },
+        {
+          "_id": "5fda6d341d71301be6f3f9fa",
+          "type": "nio2",
+          "question": "Which Java version was NIO released in ?",
+          "answer": "Java 1.4"
+        },
+        {
+          "_id": "5fda6ef89482690024616b6c",
+          "type": "nio2",
+          "question": "NIO API was intended as a replacement for ....",
+          "answer": "java.io.streams"
+        },
+        {
+          "_id": "5fda6f9b7ef9c70024fa38d0",
+          "type": "nio2",
+          "question": "NIO.2 API is actually a replacement for",
+          "answer": "java.io.File class"
+        },
+        {
+          "_id": "5fda70597ef9c70024fa38d1",
+          "type": "nio2",
+          "question": "Which interface is the primary entry point for working with the NIO.2 API?",
+          "answer": "java.nio.file.Path interface"
+        },
+        {
+          "_id": "5fda712c7ef9c70024fa38d2",
+          "type": "nio2",
+          "question": "_______________ is a is a special file within an operating system that serves as a reference or pointer to another file or directory.",
+          "answer": "symbolic link"
+        },
+        {
+          "_id": "5fda71937ef9c70024fa38d3",
+          "type": "nio2",
+          "question": "you can create an instance of a Path interface using a static method available in the ________factory class",
+          "answer": "Paths"
+        },
+        {
+          "_id": "5fda72437ef9c70024fa38d4",
+          "type": "nio2",
+          "question": "Why is Path an interface and not a class ?",
+          "answer": "The reason why Path is an interface and not a class is that creating a file or directory is considered a file system–dependent task in NIO.2."
+        },
+        {
+          "_id": "5fda72dd7ef9c70024fa38d5",
+          "type": "nio2",
+          "question": "_______ base file systems are case sensitive, while ______-based file systems are not",
+          "answer": "Linux, Windows"
+        },
+        {
+          "_id": "5fda736995c9bb0024737726",
+          "type": "nio2",
+          "question": "java.nio.file.Files  class's primary purpose is to operate on instances of______objects",
+          "answer": "Path"
+        },
+        {
+          "_id": "5fda73fd95c9bb0024737727",
+          "type": "nio2",
+          "question": "Which classes are often composed primarily of static methods that operate on a particular class.?",
+          "answer": "Helper or utility classes"
+        },
+        {
+          "_id": "5fda74a995c9bb0024737728",
+          "type": "nio2",
+          "question": "Helper classes are focused on ________________, whereas factory classes are focused primarily on __________.",
+          "answer": "manipulating or creating new objects from existing instances, object creation"
+        }
+      ]
+    }
   }
 ]

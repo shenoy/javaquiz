@@ -5,7 +5,8 @@ block content
     h1=`Total ${quiz.length} questions` 
     each q in quiz
       #box
-        p= q.question
+        p= `${(quiz.indexOf(q)+1)}. ${q.question}`
         .clicker(tabindex='1') Click
         .hiddendiv
-          p= q.answer 
+          p= q.answer
+        

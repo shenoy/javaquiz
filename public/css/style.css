@@ -1,6 +1,6 @@
 body {
   min-height: 100vh;
-  background: url(/img/oracle2.jpg) no-repeat center center fixed;
+  background: url(/img/body.jpg) no-repeat center center fixed;
   background-size: cover;
   text-align: center;
   align-items: center;
@@ -9,8 +9,8 @@ body {
 
 h1 {
   text-align: center;
-  font-family: "Lato", sans-serif;
-  color: rgb(247, 243, 243);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: rgb(185, 181, 181);
 }
 
 img {
@@ -20,7 +20,7 @@ img {
 
 a {
   color: rgb(243, 190, 234);
-  font-family: "Lato", sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 1.2rem;
   padding: 0px 10px;
   text-decoration: none;
@@ -28,7 +28,7 @@ a {
 
 a:hover {
   color: rgb(201, 233, 87);
-  font-family: "Lato", sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 1.1rem;
 }
 
@@ -42,38 +42,38 @@ ul.footer {
   padding: 0px 20px;
 }
 a.next {
-  color: rgb(250, 248, 108);
+  color: rgb(238, 238, 230);
   margin-top: 50px;
   text-align: center;
   border: 1px solid rgb(154, 154, 161);
   border-radius: 30px;
   background-color: black;
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 10px 10px 5px rgb(214, 211, 211);
   text-decoration: none;
   padding: 20px 100px 20px 100px;
 }
 
 a.next:hover {
-  color: rgb(250, 248, 108);
+  color: rgb(247, 246, 233);
   margin-top: 50px;
   text-align: center;
   border: 3px solid green;
   border: 1px solid rgb(154, 154, 161);
   border-radius: 30px;
-  background-color: red;
-  box-shadow: 1px 1px 1px black;
+  background-color: rgb(0, 204, 255);
+  box-shadow: 10px 10px 5px rgb(214, 211, 211);
   text-decoration: none;
   padding: 20px 100px 20px 100px;
 }
 
 header {
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 10px 10px 5px rgb(214, 211, 211);
   margin-bottom: 30px;
   height: 100px;
   left: 0;
   bottom: 0;
   color: white;
-  background: url(/img/header7.jpeg);
+  background-color: azure;
   width: 100%;
   align-items: center;
   text-align: center;
@@ -99,10 +99,10 @@ nav.nav {
 
 #box {
   box-sizing: content-box;
-  box-shadow: 1px 1px 0.5px black;
-  font-family: "Lato", sans-serif;
+  box-shadow: 10px 10px 5px rgb(214, 211, 211);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 1rem;
-  width: 40%;
+  width: 45%;
   height: 200px;
   padding: 30px;
   border: 1px solid rgb(154, 154, 161);
@@ -111,7 +111,7 @@ nav.nav {
   margin-bottom: 15px;
   color: black;
   background-color: white;
-  text-align: center;
+  text-align: justify;
 }
 
 .footer {
@@ -140,10 +140,18 @@ nav.nav {
 form {
   width: 50%;
   margin-left: 25%;
-  font-family: "Lato", sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: rgb(236, 223, 223);
   font-size: 2rem;
 }
+
+form.radio {
+  width: 50%;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: rgb(7, 6, 6);
+  font-size: 1rem;
+}
+
 input[type="text"],
 select {
   width: 100%;
@@ -158,7 +166,7 @@ select {
 
 input[type="submit"] {
   width: 100%;
-  background-color: #e41c37;
+  background-color: #1c9be4;
   color: rgb(241, 233, 233);
   padding: 14px 20px;
   margin: 8px 0;
@@ -182,7 +190,7 @@ input[type="submit"]:hover {
   z-index: 9999;
   color: #fff;
   font-size: 1rem;
-  font-family: "Lato", sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-align: center;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -206,12 +214,11 @@ input[type="submit"]:hover {
   height: 30px;
   background-color: rgb(237, 224, 241);
   cursor: default;
-  font-size: 1rem;
-  text-align: center;
-  align-items: center;
   margin: auto;
+  align-items: center;
   border: #fff;
   border-radius: 5px;
+  text-align: center;
 }
 p {
   text-align: center;
@@ -221,10 +228,12 @@ p {
   display: none;
   height: 100px;
   background-color: rgb(237, 247, 193);
+  padding-top: 5px;
   border-radius: 5px;
   color: blue;
   align-items: center;
   border-color: white;
+  text-align: justify;
 }
 
 .clicker:focus + .hiddendiv {
@@ -238,6 +247,7 @@ p {
   font-size: 0rem;
   width: 200px;
   height: 0px;
+  margin-top: 0;
 }
 
 @media screen and (max-width: 750px) {
@@ -269,7 +279,7 @@ p {
   }
 
   .hiddendiv {
-    height: 50px;
+    height: 75px;
   }
 }
 

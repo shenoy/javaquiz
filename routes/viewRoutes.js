@@ -14,6 +14,7 @@ router.get("/submit", viewsController.getSubmitForm);
 router.get("/exceptions", viewsController.getExceptionsQuiz);
 router.get("/javaclassdesign", viewsController.getJavaClassDesignQuiz);
 router.get("/advancedclassdesign", viewsController.getAdvancedClassDesignQuiz);
+router.get("/radio", viewsController.getRadio);
 router.get(
   "/functionalprogramming",
   viewsController.getFunctionalProgrammingQuiz
