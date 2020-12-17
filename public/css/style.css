@@ -273,6 +273,7 @@ p {
   #box {
     font-size: 1rem;
     height: 200px;
+    width: 55%;
   }
   .clicker {
     font-size: 1rem;
