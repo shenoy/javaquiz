@@ -6,7 +6,7 @@ block content
     each q in quiz
       #box
         p= `${(quiz.indexOf(q)+1)}. ${q.question}`
-        .clicker(tabindex='1') Click
+        .clicker(tabindex='1') Click for Answer
         .hiddendiv
           p= q.answer
         
