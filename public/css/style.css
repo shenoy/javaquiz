@@ -13,8 +13,14 @@ h1 {
   color: rgb(185, 181, 181);
 }
 
-header h1 {
+h4 {
+  margin-top: 50px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+header h2 {
   color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 img {
@@ -40,6 +46,7 @@ a.nav {
   padding: 0px 10px;
   word-wrap: normal;
   display: inline-block;
+  background-color: black;
 }
 ul.footer {
   display: inline-block;
@@ -70,7 +77,7 @@ a.next:hover {
 
 header {
   position: relative;
-  top: 0;
+  top: -20px;
   height: 50px;
   left: 0;
   bottom: 0;
@@ -86,7 +93,7 @@ nav.nav {
   padding-top: 10px;
   padding-bottom: 10px;
   width: 100%;
-  margin: 0;
+  margin-bottom: 50px;
   box-shadow: 10px 10px 5px rgb(214, 211, 211);
 }
 .container {

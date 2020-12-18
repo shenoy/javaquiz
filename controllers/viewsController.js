@@ -5,7 +5,6 @@ const AppError = require("../utils/appError");
 exports.getAllQuiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
   const quiz = await Quiz.find();
-  console.log(quiz);
   // 2) Build template
   res.status(200).render("topic", {
     title: "All",
@@ -28,7 +27,7 @@ exports.getRandomQuiz = catchAsync(async (req, res, next) => {
 exports.getIOQuiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
   const allQuiz = await Quiz.find();
-  const quiz = allQuiz.filter((x) => x.type === "io");
+  const quiz = allQuiz.filter((x) => x.type === "io").reverse();
   // 2) Build template
   res.status(200).render("topic", {
     title: "I/O",
@@ -39,7 +38,7 @@ exports.getIOQuiz = catchAsync(async (req, res, next) => {
 exports.getNio2Quiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
   const allQuiz = await Quiz.find();
-  const quiz = allQuiz.filter((x) => x.type === "nio2");
+  const quiz = allQuiz.filter((x) => x.type === "nio2").reverse();
   // 2) Build template
   res.status(200).render("topic", {
     title: "NIO.2",
@@ -50,7 +49,7 @@ exports.getNio2Quiz = catchAsync(async (req, res, next) => {
 exports.getGenericsQuiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
   const allQuiz = await Quiz.find();
-  const quiz = allQuiz.filter((x) => x.type.includes("generics"));
+  const quiz = allQuiz.filter((x) => x.type.includes("generics")).reverse();
   // 2) Build template
   res.status(200).render("topic", {
     title: "generics",
@@ -61,7 +60,7 @@ exports.getGenericsQuiz = catchAsync(async (req, res, next) => {
 exports.getJdbcQuiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
   const allQuiz = await Quiz.find();
-  const quiz = allQuiz.filter((x) => x.type.includes("jdbc"));
+  const quiz = allQuiz.filter((x) => x.type.includes("jdbc")).reverse();
   // 2) Build template
   res.status(200).render("topic", {
     title: "jdbc",
@@ -72,7 +71,7 @@ exports.getJdbcQuiz = catchAsync(async (req, res, next) => {
 exports.getDateQuiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
   const allQuiz = await Quiz.find();
-  const quiz = allQuiz.filter((x) => x.type.includes("date"));
+  const quiz = allQuiz.filter((x) => x.type.includes("date")).reverse();
   // 2) Build template
   res.status(200).render("topic", {
     title: "date/time",
@@ -83,7 +82,7 @@ exports.getDateQuiz = catchAsync(async (req, res, next) => {
 exports.getExceptionsQuiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
   const allQuiz = await Quiz.find();
-  const quiz = allQuiz.filter((x) => x.type.includes("ceptions"));
+  const quiz = allQuiz.filter((x) => x.type.includes("ceptions")).reverse();
   // 2) Build template
   res.status(200).render("topic", {
     title: "Exceptions",
@@ -94,7 +93,7 @@ exports.getExceptionsQuiz = catchAsync(async (req, res, next) => {
 exports.getFunctionalProgrammingQuiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
   const allQuiz = await Quiz.find();
-  const quiz = allQuiz.filter((x) => x.type.includes("ctional"));
+  const quiz = allQuiz.filter((x) => x.type.includes("ctional")).reverse();
   // 2) Build template
   res.status(200).render("topic", {
     title: "Functional Programming",
@@ -105,7 +104,7 @@ exports.getFunctionalProgrammingQuiz = catchAsync(async (req, res, next) => {
 exports.getAdvancedClassDesignQuiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
   const allQuiz = await Quiz.find();
-  const quiz = allQuiz.filter((x) => x.type.includes("dvanced"));
+  const quiz = allQuiz.filter((x) => x.type.includes("dvanced")).reverse();
   // 2) Build template
   res.status(200).render("topic", {
     title: "Adv Class Design",
@@ -116,7 +115,7 @@ exports.getAdvancedClassDesignQuiz = catchAsync(async (req, res, next) => {
 exports.getJavaClassDesignQuiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
   const allQuiz = await Quiz.find();
-  const quiz = allQuiz.filter((x) => x.type.includes("design"));
+  const quiz = allQuiz.filter((x) => x.type.includes("design")).reverse();
   // 2) Build template
   res.status(200).render("topic", {
     title: "Java Class Design",
@@ -127,7 +126,7 @@ exports.getJavaClassDesignQuiz = catchAsync(async (req, res, next) => {
 exports.getConcurrencyQuiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
   const allQuiz = await Quiz.find();
-  const quiz = allQuiz.filter((x) => x.type.includes("currency"));
+  const quiz = allQuiz.filter((x) => x.type.includes("currency")).reverse();
   // 2) Build template
   res.status(200).render("topic", {
     title: "Concurrency",
@@ -152,12 +151,6 @@ exports.getQuiz = catchAsync(async (req, res, next) => {
 exports.getSubmitForm = (req, res) => {
   res.status(200).render("submit", {
     title: "Submit your quiz",
-  });
-};
-
-exports.getRadio = (req, res) => {
-  res.status(200).render("radiobutton", {
-    title: "quiz",
   });
 };
 
