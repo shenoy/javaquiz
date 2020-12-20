@@ -13,6 +13,7 @@ h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: rgb(185, 181, 181);
   margin-top: 50px;
+  text-shadow: 1px 1px 0.5px rgb(214, 211, 211);
 }
 
 h4 {
@@ -20,9 +21,10 @@ h4 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-header h2 {
+header h3 {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 1px 1px 0.5px black;
 }
 
 img {
@@ -58,9 +60,8 @@ a.next {
   color: rgb(52, 74, 247);
   margin-top: 50px;
   text-align: center;
-  border: 1px solid rgb(231, 231, 245);
-  background-color: rgb(189, 224, 245);
-  box-shadow: 10px 10px 5px rgb(214, 211, 211);
+  background-color: rgb(143, 196, 240);
+  box-shadow: 3px 3px 1.5px rgb(214, 211, 211);
   text-decoration: none;
   padding: 20px 100px 20px 100px;
 }
@@ -69,9 +70,7 @@ a.next:hover {
   color: rgb(39, 135, 245);
   margin-top: 50px;
   text-align: center;
-  border: 3px solid green;
-  border: 1px solid rgb(233, 233, 236);
-  background-color: rgb(187, 233, 245);
+  background-color: rgb(143, 196, 240);
   box-shadow: 10px 10px 5px rgb(214, 211, 211);
   text-decoration: none;
   padding: 20px 100px 20px 100px;
@@ -88,6 +87,8 @@ header {
   align-items: center;
   text-align: center;
   justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 18px;
 }
 
 nav.nav {
@@ -245,13 +246,16 @@ input[type="submit"]:hover {
   color: blue;
   align-items: center;
   border-color: white;
-  text-align: justify;
+  text-align: center;
+  justify-content: center !important;
 }
 
 .clicker:focus + .hiddendiv {
   display: block;
   border-color: white;
   align-items: center;
+  text-align: center;
+  justify-content: center !important;
 }
 
 .clicker:focus {
