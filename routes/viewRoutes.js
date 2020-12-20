@@ -12,7 +12,7 @@ router.get("/jdbc", viewsController.getJdbcQuiz);
 router.get("/about", viewsController.getAboutPage);
 router.get("/submit", viewsController.getSubmitForm);
 router.get("/exceptions", viewsController.getExceptionsQuiz);
-router.get("/javaclassdesign", viewsController.getJavaClassDesignQuiz);
+router.get("/designpatterns", viewsController.getJavaClassDesignQuiz);
 router.get("/advancedclassdesign", viewsController.getAdvancedClassDesignQuiz);
 router.get(
   "/functionalprogramming",

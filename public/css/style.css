@@ -33,7 +33,7 @@ img {
 a {
   color: rgb(243, 190, 234);
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   padding: 0px 10px;
   text-decoration: none;
 }
@@ -41,7 +41,7 @@ a {
 a:hover {
   color: azure;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
 }
 
 a.nav {
