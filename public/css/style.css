@@ -12,6 +12,7 @@ h1 {
   text-align: center;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: rgb(185, 181, 181);
+  margin-top: 50px;
 }
 
 h4 {
@@ -95,7 +96,7 @@ nav.nav {
   padding-bottom: 10px;
   width: 100%;
   margin-bottom: 50px;
-  box-shadow: 10px 10px 5px rgb(214, 211, 211);
+  box-shadow: 3px 3px 1.5px rgb(214, 211, 211);
 }
 .container {
   width: auto;
