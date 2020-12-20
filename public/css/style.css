@@ -82,7 +82,11 @@ header {
   height: 50px;
   left: 0;
   bottom: 0;
-  background-color: rgb(143, 196, 240);
+  background-image: linear-gradient(
+    to right,
+    rgb(69, 164, 228),
+    rgb(192, 193, 255)
+  );
   width: 100%;
   align-items: center;
   text-align: center;
