@@ -115,7 +115,7 @@ exports.getAdvancedClassDesignQuiz = catchAsync(async (req, res, next) => {
 exports.getJavaClassDesignQuiz = catchAsync(async (req, res, next) => {
   // 1) Get jokes from collection
   const allQuiz = await Quiz.find();
-  const quiz = allQuiz.filter((x) => x.type.includes("design")).reverse();
+  const quiz = allQuiz.filter((x) => x.type.includes("pattern")).reverse();
   // 2) Build template
   res.status(200).render("topic", {
     title: "Java Class Design",
