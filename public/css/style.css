@@ -97,8 +97,9 @@ header {
 nav.nav {
   background-image: linear-gradient(
     to right,
-    rgb(238, 236, 236),
-    rgb(233, 233, 230)
+    rgb(208, 245, 252),
+    rgb(243, 252, 252),
+    rgb(208, 245, 252)
   );
 
   padding-top: 10px;

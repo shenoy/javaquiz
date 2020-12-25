@@ -178,3 +178,5 @@ exports.updateQuizData = catchAsync(async (req, res, next) => {
     user: updatedQuiz,
   });
 });
+
+

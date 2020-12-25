@@ -1,7 +1,6 @@
 const express = require("express");
 const viewsController = require("../controllers/viewsController");
 const router = express.Router();
-
 router.get("/", viewsController.getRandomQuiz);
 router.get("/all", viewsController.getAllQuiz);
 router.get("/io", viewsController.getIOQuiz);
@@ -19,5 +18,4 @@ router.get(
   viewsController.getFunctionalProgrammingQuiz
 );
 router.get("/nio2", viewsController.getNio2Quiz);
-
 module.exports = router;
