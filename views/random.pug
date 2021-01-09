@@ -4,6 +4,7 @@ block content
   .container  
     h1 Random Questions 
     #box
+      p= `ID: ${quiz.id}`
       p= quiz.question
       .clicker(tabindex='1') Answer
       .hiddendiv
